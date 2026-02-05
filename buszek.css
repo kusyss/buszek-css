@@ -1,9 +1,4 @@
-/*
-Free to use CSS template by Katie (#106445).
-This code may be altered, edited, or re-uploaded. 
-This template may be used to create paid codes (pre-mades and commissions).
-Please do NOT remove this credit, unless your coding becomes unrecognizable from this one! 
-*/
+
 
 /* FONT (From Google Fonts) */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
@@ -32,7 +27,7 @@ body, #container {
 /* TOPBAR ("Welcome back, ___") */
 
 .topbar {
-	background: rgba(1, 1, 1, 0.5);
+	background: #262523;
 	border: none;
 	border-top: none;
 	color: #000000;
@@ -42,51 +37,70 @@ body, #container {
 /* NAVBAR (Den/Crossroads/Etc.) */
 
 .navbar {
-	background: rgba(1, 1, 1, 0.5);
-	border-bottom: none;
-	color: #000000;
-	border-radius: 0px
+    background: linear-gradient(135deg, #D0D8D9, #262523); /* gradient od jasnoszarego do ciemnego */
+    border: 2px solid #262523; /* elegancka obramówka */
+    color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
 }
 
-/* NAVBAR BUTTON TEXT COLOR */
-
+/* NAVBAR BUTTONY */
 .navbar li a {
-	color: #000000 !important
+    color: #E0DAD5 !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #3A3D41; /* podstawa przycisku */
+    box-shadow: 0 5px #262523, 0 10px 15px rgba(0,0,0,0.3); /* efekt 3D */
+    transition: all 0.2s ease;
 }
 
-/* NAVBAR BUTTON HOVER */
-
+/* PRZYCISK HOVER */
 .navbar li a:hover {
-	background: rgba(1, 1, 1, 0.5) !important;
-	border-bottom: none;
-	color: #000000 !important;
-	border-radius: 0px
+    background: #5A5D61; /* lekko jaśniejszy przycisk przy hover */
+    color: #ffffff !important;
+    transform: translateY(-3px); /* efekt unoszenia */
+    box-shadow: 0 8px #262523, 0 12px 20px rgba(0,0,0,0.35);
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* BREADCRUMB (Home / Den) */
 
 .breadcrumb {
-	background: rgba(1, 1, 1, 0.5) !important;
-        border: none;
-	border-radius: 0px
+    background: rgba(0,0,0,0.5);
+    border: 2px solid #8C6D73;
+    border-radius: 12px;
+    padding: 6px 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    color: #8C6D73 !important; /* całość w tym kolorze */
+    font-weight: bold;
+    font-family: 'Abril Fatface', cursive;
+    position: relative;
 }
 
-/* BREADCRUMB TEXT */
-
-.breadcrumb .active {
-	color: #000000
-}
-
-/* CSS CREDIT */
-
+/* credit po prawej jako pseudo-element */
 .breadcrumb::after {
-        content: "Template by Katie (#106445)";
-        color: #000000;
-        position: absolute;
-        right: 13%; /* (This may need adjusting) */
-        z-index: 100
-    }
+    content: "Nie wkurwiaj lwa jak sra";
+    color: #8C6D73;
+    font-size: 12px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
 
+/* usuń żółty kolor z active */
+.breadcrumb .active {
+    color: #8C6D73 !important;
+}
+}
 @media only screen and (max-width: 1199px) and (min-width: 992px)  {
         .breadcrumb::after {
             right: 20%
@@ -178,24 +192,35 @@ h3 {
 	border-radius: 0px
 }
 
-/* ENERGY BAR BACKGROUND */
-.progress {
-	background: rgba(1, 1, 1, 0.5);
-	color: #000000 !important;
-	border-radius: 0px !important
+/* ==========================
+   KOLORY LICZNIKÓW / PASKÓW – PEŁNE NADPISANIE
+========================== */
+
+/* Tło paska */
+.progress, 
+.progress-bar, 
+.progress div, 
+.progress span {
+    background: #1c1c1c !important; /* ciemnoszare tło */
+    color: #D0D8D9 !important; /* jasny tekst */
+    border-radius: 12px !important;
+    font-weight: bold !important;
+    line-height: 20px !important;
+    text-align: center !important;
 }
 
-/* ENERGY BAR COLOR */
+/* Wypełnienie paska */
 .progress-bar {
-	background: rgba(1, 1, 1, 0.5);
-	color: #000000 !important;
-	border-radius: 0px !important
+    background: #8C6D73 !important; /* kolor samego wskaźnika */
 }
 
-/* ENERGY BAR TEXT */
-.progress div {
-	color: #000000 !important
+/* Tekst liczników w środku paska */
+.progress div, 
+.progress span {
+    color: #D0D8D9 !important;
 }
+
+
 
 /* CHAT */
 
@@ -385,105 +410,42 @@ a:hover {
 	display: flex
 }
 
-/* BOXES */
-
-.smallbox {
-	float: left;
-	background: rgba(1, 1, 1, 0.5);
-	color: #000000;
-	padding: 10px;
-	border: none;
-	border-radius: 0px;
-	margin: 10px;
-	height: 150px;
-	width: 28.4%;
-	overflow: auto
+/* ==========================
+   SZARE NOWOCZESNE BOXY – FINAL
+========================== */
+.panel, 
+.feature, 
+.table .left, 
+.inner-table .left,
+.cave-grid, 
+.mound-grid {
+    background: linear-gradient(145deg, #2b2b2b, #1c1c1c) !important; /* ciemnoszary gradient */
+    border-radius: 12px !important; /* lekko zaokrąglone rogi */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5), inset 0 1px 3px rgba(255,255,255,0.05) !important; /* delikatny cień i efekt 3D */
+    color: #ffffff !important;
+    padding: 12px !important;
+    transition: all 0.3s ease !important;
+    border: none !important; /* usuwa stare ramki */
 }
 
-.mediumbox {
-	float: left;
-	background: rgba(1, 1, 1, 0.5);
-	color: #000000;
-	padding: 10px;
-	border: none;
-	border-radius: 0px;
-	margin: 10px;
-	height: 150px;
-	width: 43.8%;
-	overflow: auto
+/* Hover efekt – lekko unosi boxy i pogłębia cień */
+.panel:hover, 
+.feature:hover, 
+.table .left:hover, 
+.inner-table .left:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6), inset 0 2px 5px rgba(255,255,255,0.08) !important;
 }
 
-.largebox {
-	float: left;
-	background: rgba(1, 1, 1, 0.5);
-	color: #000000;
-	padding: 10px;
-	border: none;
-	border-radius: 0px;
-	margin: 10px;
-	height: 150px;
-	width: 90%;
-	overflow: auto
+/* Dodatkowo upewniamy się, że wcześniejsze niebieskie tła nie wkradną się */
+.inner-table .left, 
+.table .left {
+    background: linear-gradient(145deg, #2b2b2b, #1c1c1c) !important;
+    color: #ffffff !important;
+}
 }
 
-/* HOVER BOXES */
 
-.smallhoverbox {
-	float: left;
-	background: rgba(1, 1, 1, 0.5);
-	color: #000000;
-	padding: 10px;
-	border: none;
-	border-radius: 0px;
-	margin: 10px;
-	height: 50px;
-	width: 28.4%;
-	overflow: auto;
-        transition: 3s
-}
-
-.smallhoverbox:hover {
-	height: 150px;
-	width: 28.4%;
-}
-
-.mediumhoverbox {
-	float: left;
-	background: rgba(1, 1, 1, 0.5);
-	color: #000000;
-	padding: 10px;
-	border: none;
-	border-radius: 0px;
-	margin: 10px;
-	height: 50px;
-	width: 43.8%;
-	overflow: auto;
-        transition: 3s
-}
-
-.mediumhoverbox:hover {
-	height: 150px;
-	width: 43.8%;
-}
-
-.largehoverbox {
-	float: left;
-	background: rgba(1, 1, 1, 0.5);
-	color: #000000;
-	padding: 10px;
-	border: none;
-	border-radius: 0px;
-	margin: 10px;
-	height: 150px;
-	width: 90%;
-	overflow: auto;
-        transition: 3s
-}
-
-.largehoverbox:hover {
-	height: 150px;
-	width: 90%;
-}
 
 /* SCROLL BAR */
 
@@ -544,7 +506,7 @@ div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
 /* CAVE / MOUND IMAGES */
 
 div.cave-grid>img /* Pregnant Lionesses */ {
-	content: url('https://i.imgur.com/gys2UpT.png') !important
+	content: url('https://i.imgur.com/MGFUuHr.gifv') !important
 }
 
 /* New Cave Image */
@@ -603,4 +565,25 @@ body, h1, h2, h3, h4, h5, h6, p, a, input, select, textarea, button, .panel, .si
 /* Neopets White Kougra - From Cursors-4U.com */
 * {
   cursor: url('https://cdn.cursors-4u.net/css-previews/neopets-white-kougra-8a326b46-css.webp') 0 0, auto !important;
+}
+
+/* ==========================
+   LICZNIKI / PASKI W LIODEN
+========================== */
+
+/* Tło i tekst wszystkich pasków w Lioden */
+.statBar {
+    background-color: #1c1c1c !important; /* tło paska */
+    border-radius: 12px !important;
+    height: 20px !important;
+    color: #D0D8D9 !important; /* tekst liczników */
+}
+
+/* Wypełnienie pasków */
+.statBar > div {
+    background-color: #8C6D73 !important; /* kolor wskaźnika */
+    border-radius: 12px !important;
+    color: #D0D8D9 !important; /* tekst w środku */
+    line-height: 20px !important;
+    text-align: center !important;
 }
