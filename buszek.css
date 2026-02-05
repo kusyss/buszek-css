@@ -1,656 +1,70 @@
-/* FONT (From Google Fonts) */
+/* ==========================
+   FONT
+========================== */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+body, h1, h2, h3, h4, h5, h6, p, a, input, select, textarea, button, .panel, .singlebox {
+    font-family: 'Abril Fatface', cursive !important;
+}
 
-/* BACKGROUND */
+/* ==========================
+   BACKGROUND
+========================== */
 body, #container {
-	background: url("https://i.imgur.com/fbIlZNO.jpg") center fixed !important;
-	background-size: cover !important;
-	font-family: 'Abril Fatface', cursive; /* TU ustawiamy globalnie */
-/* MAIN PANEL */
-
-/* RIGHT SIDE */
-.container.main {
-	background: rgba(1, 1, 1, 0.5);
-	border: none;
-	box-shadow: none;
-	border-radius: 0px
+    background: url("https://i.imgur.com/fbIlZNO.jpg") center fixed !important;
+    background-size: cover !important;
 }
 
-/* LEFT SIDE */
-.col-md-9 {
-	background: none;
-        border-right: none
-}
-
-/* TOPBAR ("Welcome back, ___") */
-
+/* ==========================
+   TOPBAR
+========================== */
 .topbar {
-	background: #262523;
-	border: none;
-	border-top: none;
-	color: #000000;
-	border-radius: 0px;
+    background: rgba(1,1,1,0.5) !important;
+    border: none;
+    color: #D0D8D9 !important;
+    border-radius: 0px;
 }
 
-/* NAVBAR (Den/Crossroads/Etc.) */
-
+/* ==========================
+   NAVBAR
+========================== */
 .navbar {
-    background: linear-gradient(135deg, #D0D8D9, #262523); /* gradient od jasnoszarego do ciemnego */
-    border: 2px solid #262523; /* elegancka obramówka */
+    background: linear-gradient(135deg, #D0D8D9, #262523);
+    border: 2px solid #262523;
     color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     transition: all 0.3s ease;
 }
-
-/* NAVBAR BUTTONY */
 .navbar li a {
     color: #E0DAD5 !important;
     padding: 10px 18px;
     border-radius: 8px;
-    background: #3A3D41; /* podstawa przycisku */
-    box-shadow: 0 5px #262523, 0 10px 15px rgba(0,0,0,0.3); /* efekt 3D */
-    transition: all 0.2s ease;
-}
-
-/* PRZYCISK HOVER */
-.navbar li a:hover {
-    background: #5A5D61; /* lekko jaśniejszy przycisk przy hover */
-    color: #ffffff !important;
-    transform: translateY(-3px); /* efekt unoszenia */
-    box-shadow: 0 8px #262523, 0 12px 20px rgba(0,0,0,0.35);
-}
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* BREADCRUMB (Home / Den) */
-
-.breadcrumb {
-    background: rgba(0,0,0,0.5);
-    border: 2px solid #8C6D73;
-    border-radius: 12px;
-    padding: 6px 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-    color: #8C6D73 !important; /* całość w tym kolorze */
-    font-weight: bold;
-    font-family: 'Abril Fatface', cursive;
-    position: relative;
-}
-
-/* credit po prawej jako pseudo-element */
-.breadcrumb::after {
-    content: "Nie wkurwiaj lwa jak sra";
-    color: #8C6D73;
-    font-size: 12px;
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-/* usuń żółty kolor z active */
-.breadcrumb .active {
-    color: #8C6D73 !important;
-}
-}
-@media only screen and (max-width: 1199px) and (min-width: 992px)  {
-        .breadcrumb::after {
-            right: 20%
-        }
-    }
-
-    @media only screen and (max-width: 991px) and (min-width: 768px)  {
-        .breadcrumb::after {
-            right: 20%
-        }
-    }
-
-    @media only screen and (max-width: 767px) {
-        .breadcrumb::after {
-            right: 22%
-        }
-    }
-
-/* BOOKMARK BUTTON */
-
-input.floatright, input.floatright:hover {
-	background: rgba(1, 1, 1, 0.5) !important;
-        border: none !important;
-	border-radius: 0px;
-	color: #000000 !important;    
-}
-
-/* SWITCH ACCOUNT BUTTON */
-
-button.button, button.button:hover {
-	background: rgba(1, 1, 1, 0.5);
-        border: none !important;
-	border-radius: 0px;
-        text-shadow: none !important;
-	color: #000000 !important
-}
-
-/* ALERTS (ie. "Your lionesses have returned from hunting!") */
-
-.alert,
-.alert-warning,
-.alert-danger {
-	background: rgba(1, 1, 1, 0.5) !important;
-	border: none;
-	color: #000000;
-	border-radius: 0px !important
-}
-
-/* BIGGEST HEADER ("___"'s DEN) */
-
-h1 {
-	color: #000000;
-	font-size: 90px;
-	text-align: center;
-        font-family: 'FONT NAME'
-}
-
-
-/* MEDIUM HEADER */
-
-h2 {
-	color: #000000;
-	font-size: 24px;
-	text-align: center
-}
-
-
-/* SMALL HEADER */
-
-h3 {
-	color: #000000 !important;
-	font-size: 14px !important
-}
-
-/* RIGHT SIDE PANEL HEADER */
-
-.sidebar h3 {
-	color: #000000 !important;
-        font-size: 26px !important;
-        font-family: 'FONT NAME'
-}
-
-/* RIGHT SIDE PANELS */
-.panel {
-	background: rgba(1, 1, 1, 0.5) !important;
-	box-shadow: none !important;
-	border: none !important;
-	color: #000000 !important;
-	border-radius: 0px
-}
-
-/* ==========================
-   KOLORY LICZNIKÓW / PASKÓW – PEŁNE NADPISANIE
-========================== */
-
-/* Tło paska */
-.progress, 
-.progress-bar, 
-.progress div, 
-.progress span {
-    background: #1c1c1c !important; /* ciemnoszare tło */
-    color: #D0D8D9 !important; /* jasny tekst */
-    border-radius: 12px !important;
-    font-weight: bold !important;
-    line-height: 20px !important;
-    text-align: center !important;
-}
-
-/* Wypełnienie paska */
-.progress-bar {
-    background: #8C6D73 !important; /* kolor samego wskaźnika */
-}
-
-/* Tekst liczników w środku paska */
-.progress div, 
-.progress span {
-    color: #D0D8D9 !important;
-}
-
-
-
-/* CHAT */
-
-.s-chat-message:nth-child(even) /* Even Numbered Messages */ {
-	background: rgba(1, 1, 1, 0.5) !important;
-        color: #000000 !important;
-	border: none !important
-}
-
-.s-chat-message:nth-child(odd) /* Odd Numbered Messages */ {
-	background: rgba(1, 1, 1, 0.5) !important;
-        color: #000000 !important;
-	border: none !important
-}
-
-.s-chat-message__pinned /* Pinned Message */ {
-	background: rgba(1, 1, 1, 0.5) !important;
-        color: #000000 !important;
-	border: none !important
-}
-
-.s-chat-message_timestamp /* Timestamps */ {
-	color: #000000 !important;
-}
-
-div#chatMessageContainer {
-	border: none !important;
-}
-
-button#label_currentChannel /* Channel Button ie. Main, Sales */ {
-	background: rgba(1, 1, 1, 0.5) !important;
-        color: #000000 !important;
-	border: none !important
-}
-
-/* LION INFO TABLE (Level, Stats, Territory Count, Etc.) */
-
-
-/* PANEL BACKGROUND COLOR */
-
-.table {
-	background: rgba(1, 1, 1, 0.5);
-	border: none !important;
-	border-collapse: separate;
-	border-radius: 0px
-}
-
-
-/* HEADERS COLOR (King Name + Title, "There are _ lions with mutations in _'s pride.") */
-
-.top,
-.bottom,
-th {
-	background: rgba(1, 1, 1, 0.5) !important;
-	color: #000000 !important;
-	border-radius: 0px
-}
-
-td.bottom a {
-        text-decoration: none !important
-}
-
-/* Color behind "Level, Stats, Branch, Territory" etc. */
-
-.inner-table .left {
-	background: rgba(155, 226, 242, 0.6) !important;
-        color: #2e2a2b;
-	border-radius: 0px
-}
-
-
-/* Color behind the number of all of the things above */
-
-.inner-table .right {
-	background: none;
-	border-radius: 0px !important
-}
-
-td.right {
-	border-radius: 0px !important
-}
-
-/* IGNORE */
-.right_odd {
-	background: none !important
-}
-
-/* Affects the color behind "_ Unsorted", "_ Pregnant Lionesses", "View Pride Overview", and cave/mound names */
-
-.cave-grid,
-.mound-grid {
-	background: rgba(1, 1, 1, 0.5);
-	border: none !important;
-	border-radius: 0px !important
-}
-
-/* FEED ALL, PLAY ALL */
-
-.feature {
-	background: rgba(1, 1, 1, 0.5) !important;
-	color: #000000 !important;
-	border: 1px solid #000000 !important;
-	border-radius: 0px !important
-}
-
-/* "King Dynasty, Pride Dynasty, Achievements, Showcase" Panels */
-
-.feature,
-div.left {
-	background: rgba(1, 1, 1, 0.5);
-	border: none;
-	border-radius: 0px !important
-}
-
-/* Block of color behind "Territory Description, Player Name, Avatar URL" etc. */
-
-.table .left {
-	background: rgba(1, 1, 1, 0.5);
-        border-radius: 0px
-}
-
-/* Color behind the content of the elements listed above */
-
-input,
-select,
-textarea {
-	background: rgba(1, 1, 1, 0.5) !important;
-	border: none !important;
-	border-radius: 0px !important;
-	color: #000000 !important;
-	box-shadow: none !important;
-	text-shadow: none !important
-}
-
-/* ACCOUNT OPTIONS PANELS  (Friend Requests Toggles, etc.) */
-
-.item-header {
-	background: rgba(1, 1, 1, 0.5) !important;
-	color: #000000  !important;
-	border-radius: 0px !important;
-}
-
-.item {
-	background: rgba(1, 1, 1, 0.5) !important;
-	border: none !important;
-	border-radius: 0px !important
-}
-
-/* ACCOUNT OPTIONS ON/OFF TOGGLE SWITCH */
-
-div.slider.round /* Background */ {
-	background: #000000 !important
-}
-
-div.slider.round::before /* Circle Part */ {
-	background: #000000 !important
-}
-
-/* Copyright, Terms of Service, CoC, etc. */
-
-div.container.footer.center.white.visible-lg.visible-md.visible-sm, div.container.footer.center.white.visible-lg.visible-md.visible-sm a {
-        color: #000000 !important;
-        text-shadow: none !important
-}
-
-/* LINK COLOR */
-
-a:link,
-a:visited {
-	color: #ffffff !important
-}
-
-/* LINK HOVER COLOR */
-
-a:hover {
-	color: #ffffff !important
-}
-
-
-/* BOX CONTAINER */
-
-.boxcontainer {
-	background: none;
-	height: auto;
-	padding: 0px;
-	justify-content: center;
-	display: flex
-}
-
-/* ==========================
-   SZARE NOWOCZESNE BOXY – FINAL
-========================== */
-.panel, 
-.feature, 
-.table .left, 
-.inner-table .left,
-.cave-grid, 
-.mound-grid {
-    background: linear-gradient(145deg, #2b2b2b, #1c1c1c) !important; /* ciemnoszary gradient */
-    border-radius: 12px !important; /* lekko zaokrąglone rogi */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5), inset 0 1px 3px rgba(255,255,255,0.05) !important; /* delikatny cień i efekt 3D */
-    color: #ffffff !important;
-    padding: 12px !important;
-    transition: all 0.3s ease !important;
-    border: none !important; /* usuwa stare ramki */
-}
-
-/* Hover efekt – lekko unosi boxy i pogłębia cień */
-.panel:hover, 
-.feature:hover, 
-.table .left:hover, 
-.inner-table .left:hover {
-    transform: translateY(-3px) !important;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6), inset 0 2px 5px rgba(255,255,255,0.08) !important;
-}
-
-/* Dodatkowo upewniamy się, że wcześniejsze niebieskie tła nie wkradną się */
-.inner-table .left, 
-.table .left {
-    background: linear-gradient(145deg, #2b2b2b, #1c1c1c) !important;
-    color: #ffffff !important;
-}
-}
-
-
-
-/* SCROLL BAR */
-
-/* WIDTH */
-
-::-webkit-scrollbar {
-	width: 10px
-}
-
-
-/* BACKGROUND */
-
-::-webkit-scrollbar-track {
-	background: #ffffff
-}
-
-
-/* "THUMB" */
-
-::-webkit-scrollbar-thumb {
-	background: #000000;
-	border-radius: 0px
-}
-
-
-/* LION AND USER AVATAR OPACITY */
-
-div#lion_image {
-	opacity: 1
-}
-
-table#player img {
-	opacity: 1
-}
-
-
-/* CIRCULAR LION AND USER AVATAR */
-
-div#lion_image {
-	border-radius: 50% !important;
-	overflow: hidden;
-	margin-top: 15px; /* May need adjusting */
-	margin-left: 12px /* May need adjusting */
-}
-
-table#player img {
-	border-radius: 50% !important;
-	overflow: hidden
-}
-
-
-/* LIODEN LOGO REPLACER */
-
-div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
-	content: url(https://i.imgur.com/Ir3J7S0.png)
-}
-
-/* CAVE / MOUND IMAGES */
-
-div.cave-grid>img /* Pregnant Lionesses */ {
-	content: url('https://i.imgur.com/MGFUuHr.gifv') !important
-}
-
-/* New Cave Image */
-a[href$="cave.php?id=576720"] > div.cave-grid > img {
-    content: url('https://i.imgur.com/gys2UpT.png') !important;
-}
-
-a[href$="lionoverview.php?id=PLAYER ID"]>div.cave-grid>img /* Pride Overview */ {
-	content: url('https://i.imgur.com/gys2UpT.png') !important
-}
-
-a[href$="unsorted.php?id=PLAYER ID"]>div.cave-grid>img /* Unsorted */ {
-	content: url('https://i.imgur.com/gys2UpT.png') !important
-}
-
-.mound-grid img /* Mound(s) */ {
-	background: url("https://i.imgur.com/gys2UpT.png");
-	width: 0;
-	height: 0;
-	padding-top: 80px;
-	padding-right: 130px
-}
-
-/* MAKES BOXES/DESCRIPTION SHOW ON MOBILE */
-
-@media only screen and (max-width: 767px) {
-        .container.main .hidden-xs {
-            display: block !important;
-        }
-}
-
-@media only screen and (max-width: 991px) and (min-width: 768px) {
-	display: block !important;
-}
-
-@media only screen and (min-width: 1200px) {
-		div.quote {
-			width: 790px;
-		}
-	}
-.singlebox {
-	max-width: 520px;   /* ← TU */
-	margin: 30px auto;
-	padding: 25px;
-
-	background: rgba(0, 0, 0, 0.35);
-	border: 1px solid rgba(0, 0, 0, 0.8);
-
-	color: #e0e0e0;
-	text-align: center;
-}
-body, h1, h2, h3, h4, h5, h6, p, a, input, select, textarea, button, .panel, .singlebox {
-    font-family: 'Abril Fatface', cursive !important;
-}
-
-/* Neopets White Kougra - From Cursors-4U.com */
-* {
-  cursor: url('https://cdn.cursors-4u.net/css-previews/neopets-white-kougra-8a326b46-css.webp') 0 0, auto !important;
-}
-
-/* CAŁE PASKI STATYSTYK */
-#energyBar, #expBar, #lionessEnergyBar, #fameBar {
-    background-color: #1c1c1c !important; /* ciemne tło */
-    border-radius: 12px !important;
-    height: 22px !important;
-    color: #D0D8D9 !important; /* tekst liczników */
-}
-
-/* Wypełnienie paska */
-#energyBar div, #expBar div, #lionessEnergyBar div, #fameBar div {
-    background-color: #8C6D73 !important; /* kolor samego wskaźnika */
-    border-radius: 12px !important;
-    color: #D0D8D9 !important;
-    font-weight: bold !important;
-    text-align: center !important;
-    line-height: 22px !important;
-}
-
-/* Dodatkowo wymusz jasny tekst na pseudo-elementach */
-#energyBar span, #expBar span, #lionessEnergyBar span, #fameBar span {
-    color: #D0D8D9 !important;
-}
-/* ==========================
-   POWIADOMIENIA I LINKI
-========================== */
-
-/* Tekst w alertach / powiadomieniach */
-.alert, 
-.alert-warning, 
-.alert-danger, 
-.s-chat-message, 
-.s-chat-message__pinned,
-div#chatMessageContainer span,
-div#chatMessageContainer a {
-    color: #D0D8D9 !important; /* jasny szary */
-}
-
-/* Linki w powiadomieniach i hover */
-.alert a,
-.alert-warning a,
-.alert-danger a,
-.s-chat-message a,
-.s-chat-message__pinned a,
-div#chatMessageContainer a {
-    color: #D0D8D9 !important; /* domyślny kolor linku */
-    text-decoration: underline; /* żeby było widać, że to link */
-    transition: color 0.2s ease;
-}
-
-.alert a:hover,
-.alert-warning a:hover,
-.alert-danger a:hover,
-.s-chat-message a:hover,
-.s-chat-message__pinned a:hover,
-div#chatMessageContainer a:hover {
-    color: #8C6D73 !important; /* kolor hover */
-}
-/* ==========================
-   TEKSTY POWIADOMIEŃ O CZŁONKACH / NOWYCH LWOWACH
-========================== */
-
-/* Wszystkie teksty w alertach członków */
-.alert-info, .alert-info a {
-    color: #D0D8D9 !important; /* jasny tekst */
-    text-decoration: none !important;
-}
-
-/* Hover dla linków w tych alertach */
-.alert-info a:hover {
-    color: #8C6D73 !important; /* kolor przy hover */
-}
-
-.navbar li a {
-    color: #E0DAD5 !important;
-    padding: 10px 18px;
-    border-radius: 8px;
-    background: #3A3D41;
+    background: rgba(58,61,65,0.8);
     box-shadow: 0 5px #262523, 0 10px 15px rgba(0,0,0,0.3);
     transition: all 0.2s ease;
 }
-
 .navbar li a:hover {
-    background: #5A5D61;
+    background: rgba(90,93,97,0.8);
     color: #ffffff !important;
     transform: translateY(-3px);
     box-shadow: 0 8px #262523, 0 12px 20px rgba(0,0,0,0.35);
+}
+
+/* ==========================
+   PANEL / BOXES
+========================== */
+.container.main, .panel, .feature, .table .left, .inner-table .left, .cave-grid, .mound-grid {
+    background: rgba(1,1,1,0.5) !important; /* półprzezroczyste */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    color: #D0D8D9 !important;
+    border: none !important;
+    padding: 10px;
+    transition: all 0.3s ease !important;
+}
+.panel:hover, .feature:hover, .table .left:hover, .inner-table .left:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
 
 /* ==========================
@@ -661,13 +75,11 @@ div#chatMessageContainer a:hover {
     border: 2px solid #8C6D73;
     border-radius: 12px;
     padding: 6px 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     color: #8C6D73 !important;
     font-weight: bold;
     font-family: 'Abril Fatface', cursive;
     position: relative;
 }
-
 .breadcrumb::after {
     content: "Nie wkurwiaj lwa jak sra";
     color: #8C6D73;
@@ -679,39 +91,95 @@ div#chatMessageContainer a:hover {
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
-
 .breadcrumb .active {
     color: #8C6D73 !important;
 }
 
-/* RESPONSIVE BREADCRUMB */
-@media only screen and (max-width: 1199px) and (min-width: 768px) {
-    .breadcrumb::after { right: 20%; }
+/* ==========================
+   LIO / CAVE / MOUND IMAGES
+========================== */
+div#lion_image, table#player img {
+    border-radius: 50% !important;
+    overflow: hidden;
+    opacity: 1;
 }
-@media only screen and (max-width: 767px) {
-    .breadcrumb::after { right: 22%; }
+div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
+    content: url(https://i.imgur.com/Ir3J7S0.png);
+}
+div.cave-grid>img { content: url('https://i.imgur.com/MGFUuHr.gifv') !important; }
+a[href$="cave.php?id=576720"] > div.cave-grid > img { content: url('https://i.imgur.com/gys2UpT.png') !important; }
+.mound-grid img { background: url("https://i.imgur.com/gys2UpT.png"); width:0; height:0; padding-top:80px; padding-right:130px; }
+
+/* ==========================
+   PROGRESS BARS
+========================== */
+#energyBar, #expBar, #lionessEnergyBar, #fameBar {
+    background-color: rgba(28,28,28,0.9) !important;
+    border-radius: 12px !important;
+    height: 22px !important;
+}
+#energyBar div, #expBar div, #lionessEnergyBar div, #fameBar div {
+    background-color: #8C6D73 !important;
+    border-radius: 12px !important;
+    color: #D0D8D9 !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    line-height: 22px !important;
 }
 
 /* ==========================
-   ALERTS & CHAT
+   ALERTS / CHAT
 ========================== */
-.alert, .alert-warning, .alert-danger,
-.s-chat-message, .s-chat-message__pinned,
-div#chatMessageContainer span, div#chatMessageContainer a,
-.alert-info, .member-info, .player-info, .new-member {
+.alert, .alert-warning, .alert-danger, .s-chat-message, .s-chat-message__pinned {
+    background: rgba(1,1,1,0.5) !important;
     color: #D0D8D9 !important;
+    border-radius: 0px !important;
+    border: none !important;
 }
-
-.alert a, .alert-info a, .s-chat-message a, .s-chat-message__pinned a,
-div#chatMessageContainer a, .member-info a, .player-info a, .new-member a {
+.alert a, .alert-warning a, .alert-danger a,
+.s-chat-message a, .s-chat-message__pinned a {
     color: #D0D8D9 !important;
     text-decoration: none !important;
-    transition: color 0.2s ease !important;
 }
-.alert a:hover, .alert-info a:hover, .s-chat-message a:hover, .s-chat-message__pinned a:hover,
-div#chatMessageContainer a:hover, .member-info a:hover, .player-info a:hover, .new-member a:hover {
+.alert a:hover, .s-chat-message a:hover, .s-chat-message__pinned a:hover {
     color: #8C6D73 !important;
 }
 
-/* ==========================*
+/* ==========================
+   MISC
+========================== */
+* { cursor: url('https://cdn.cursors-4u.net/css-previews/neopets-white-kougra-8a326b46-css.webp') 0 0, auto !important; }
+a:link, a:visited { color:#ffffff !important; }
+a:hover { color:#ffffff !important; }
 
+/* mid header */
+
+h2 {
+	color: #D0D8D9;
+	font-size: 24px;
+	text-align: center
+}
+
+/* small header */
+
+h3 {
+	color: #8C6D73 !important;
+	font-size: 14px !important
+}
+
+/* energy bar hex */
+.progress-bar {
+	background: rgba(1, 1, 1, 0.5);
+	color: #8C6D73 !important;
+	border-radius: 0px !important
+}
+
+/* King Name + Title */
+
+.top,
+.bottom,
+th {
+	background: rgba(1, 1, 1, 0.5) !important;
+	color: #9FA6A5 !important;
+	border-radius: 0px
+}
